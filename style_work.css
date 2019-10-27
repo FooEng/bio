@@ -1,0 +1,119 @@
+/* import google font */
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Merriweather|Muli&display=swap');
+
+/* Font size of the body */
+body {
+    font-family: "Muli", sans-serif;
+}
+
+/* Background image */
+.workquote {
+    background-image: url("images/work.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    height: 250px;
+}
+
+.workquote > p {
+    font-size: 2.5em;
+    font-family: "Dancing Script", sans-serif;
+    text-align: left;
+    margin-left: 20px;
+    padding-top: 120px;
+    color: white;
+}
+
+.work {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.work > a {
+    text-decoration: none;
+}
+
+/* Work example section */
+.container-fluid {
+    background-color: #E3E0E5;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.container-fluid img {
+    display: inline;
+    border-radius: 3%;
+    max-width: 1000px;
+}
+
+.container-fluid .work-title {
+    font-family: "Merriweather", sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.container-fluid .work-app {
+    font-family: "Merriweather", sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.container-fluid .work-intro {
+    font-size: 1.2em;
+    width: 80%;
+    display: inline-block;
+}
+
+.container-fluid a {
+    text-decoration: none;
+}
+
+.container-fluid button {
+    background-color: #900C3F;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    color: white;
+    font-size: 1.2em;
+    width: 80%;
+}
+
+.container-fluid button:hover {
+    color: white;
+    background-color: #590543;
+}
+
+#btn-blue {
+    background-color:#2312A0;
+}
+
+#btn-blue:hover {
+    background-color: #140967;
+}
+
+/* Link to homepage */
+.homepage {
+    margin: 30px auto;
+    font-family: "Merriweather", sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.homepage:hover > button > a {
+    color: white;
+}
+
+.homepage a {
+    text-decoration: none;
+}
+
+/* Footer */
+#copyright {
+    font-size: 1em;
+    text-align: center;
+}
