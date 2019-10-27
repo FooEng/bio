@@ -1,0 +1,188 @@
+/* import google font */
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Merriweather|Muli&display=swap');
+
+/* Font size of the body */
+body {
+    font-family: "Muli", sans-serif;
+}
+
+/* Set color of main theme color */
+$color: #900C3F;
+
+/* Set inheritance for background image */
+%parallax-scrolling {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+}
+
+/* Welcome section */
+.parallax {
+    @extend %parallax-scrolling;
+    background-image: url("images/me.jpg");
+    height: 800px;
+    width: 100%;
+}
+
+.intro {
+    text-align: center;
+    z-index: 1;
+    color: white;
+    font-size: 2.5em;
+    font-family: "Merriweather", sans-serif;
+}
+
+#myname {
+    padding-top: 5px;
+    font-size: 2em;
+}
+
+/* To create a line before and after my name */
+#myname::before, #myname::after {
+    background-color: white;
+    content:"";
+    display: inline-block;
+    height: 3px;
+    position: relative;
+    vertical-align: middle;
+    width: 10%;
+}
+
+#myname::before {
+    right: 0.3em;
+    margin-left: -50%;
+}
+
+#myname::after {
+    left: 0.3em;
+    margin-right: -50%;
+}
+
+/* Content section */
+.main, .aside {
+    background-color: #E3E0E5;
+    padding: 15px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.main {
+    border-right: 2px dotted $color;
+
+    h1 {
+        text-align: center;
+        font-family: "Merriweather", sans-serif;
+        color: $color;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+}
+
+.aside {
+
+    h2 {
+        text-align: center;
+        font-family: "Merriweather", sans-serif;
+        color: $color;
+    }
+
+    ul {
+        li {
+            list-style: none;
+            padding-top: 20px;
+            font-size: 1.5em;
+            
+            a {
+                text-decoration: none;
+                color:#2E0749;
+            }
+        }
+    }
+}
+
+/* To create a line around the text if viewport is >1000px */
+@media (min-width: 1000px) {
+    .main h1::before, .main h1::after, .aside h2::before, .aside h2::after {
+        background-color: $color;
+        content:"";
+        display: inline-block;
+        height: 2px;
+        position: relative;
+        vertical-align: middle;
+        width: 5%;
+    }
+    
+    .main h1::before, .aside h2::before {
+        right: 0.2em;
+        margin-left: -10%;
+    }
+    
+    .main h1::after, .aside h2::after {
+        left: 0.2em;
+        margin-right: -10%;
+    }
+}
+
+/* To create a bottom line following the text if viewport is <1000px */
+@media (max-width: 999px) {
+    .main h1::after, .aside h2::after {
+        background-color: $color;
+        content:"";
+        display: block;
+        height: 2px;
+        position: relative;
+        margin-top: 5px;
+    }
+
+    .main h1::after {
+        width: 10%;
+        left: 45%;
+    }
+
+    .aside h2::after {
+        width: 30%;
+        left: 35%;
+    }
+}
+
+/* Quote */
+.quote {
+    @extend %parallax-scrolling;
+    background-image: url("images/rain.jpg");
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.quote > p:hover {
+    color: #500E1B;
+}
+
+.quote > p {
+    font-family: "Dancing Script", sans-serif;
+    font-size: 2em;
+    color: #200631;
+}
+
+/* Contact info */
+footer > p {
+    font-size: 2em;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.contact {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 4em;
+}
+
+#copyright {
+    font-size: 1em;
+}
